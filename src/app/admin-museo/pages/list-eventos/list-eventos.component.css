@@ -1,0 +1,21 @@
+
+  .btn {
+    margin-right: 5px;
+  }
+
+  .custom-button {
+    background-color: #212529!important;
+    color: white!important;
+  }
+
+  .custom-button:hover {
+    background-color: rgb(56, 56, 56)!important;
+  }
+
+  .my-pagination ::ng-deep .ngx-pagination .current {
+    background: #212529!important;
+  }
+
+  
+
+  

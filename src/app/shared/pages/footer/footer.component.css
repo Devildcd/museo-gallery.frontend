@@ -1,0 +1,20 @@
+.btn-secundary {
+    color: aliceblue;
+    margin-top: -12px;
+    font-size: 11pt;
+}
+
+.fa-cog {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .owner {
+        margin-left: 30px;
+    }
+}
+
+.header-social-icons {
+    display: flex;
+}
+

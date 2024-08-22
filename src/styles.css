@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/css/fontawesome-free/css/all.min.css";
+@import "assets/css/adminStyles.css";
+/* @import "assets/sidebar-01/css/style.css"; */
+@import '~animate.css/animate.min.css';
+
+/* CSS Document */
+
+@font-face {
+    font-family: 'Kessel105Text-Book' format('truetype');
+    src: url('/assets/fonts/kessel-105-text-heavy-oblique.ttf');
+  }
+  
+  a, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Kessel105Text-Book';
+  }
+
+
+
+
+

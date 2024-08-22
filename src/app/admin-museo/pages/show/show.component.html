@@ -1,0 +1,51 @@
+
+<div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<div *ngIf="!loading" class="container-fluid ">
+
+    <div class="card card d-flex flex-column">
+        <div class="card-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <h2 id="card_title">
+                    <h3>{{ contenido.nombre }}</h3>
+                </h2>
+
+            </div>
+
+            <div class="card-body flex-grow-1">
+                <div class="estudiante-info">
+                    <div class="d-flex">
+                        <span *ngIf="contenido.principal == true" class="elemento"><strong>Principal <i class="fa fa-check"></i></strong></span>
+                        <span *ngIf="contenido.programado == true" class="elemento"><strong>Programado <i class="fa fa-check"></i></strong></span>
+                        <span *ngIf="contenido.prioridad == true" class="elemento"><strong>Prioridad <i class="fa fa-check"></i></strong></span>
+                    </div>
+                    
+                    <p class="elemento" *ngIf="contenido.info"><strong>Reseña:</strong> {{ contenido.info }}</p>
+                    <p class="elemento" *ngIf="contenido.fecha"><strong>Fecha:</strong> {{ contenido.fecha.toLocaleDateString() }}</p>
+                    <p class="elemento"><strong>Tipo de Contenido:</strong> {{ contenido.tipo }}</p>
+                    <p style="overflow: hidden; width: 100%; text-align: justify;  font-size: 11pt; overflow: auto; max-height: 255px;">
+                        <strong>Detalles:</strong>
+                        {{ contenido.detalles }}
+                    </p>
+                </div>
+
+                <h2 *ngIf="contenido.imagenes?.length! > 0">Galería de Imágenes</h2>
+
+                <div class="preview-images" style="margin-top: 10px;">
+                  <div *ngFor="let imagen of contenido.imagenes">
+
+                    <mat-card class="preview-card">
+                      <img [src]="imagen.img | img" alt="Imagen de {{ contenido.nombre }}">
+                    </mat-card>
+
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

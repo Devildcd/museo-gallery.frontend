@@ -1,0 +1,168 @@
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+  font: 'Kessel105Text-Book';
+}
+
+h5{
+  font-family: 'Kessel105Text-Book';
+  font: 'Kessel105Text-Book';
+  font-size: 17pt;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 15pt;
+  line-height: 27px;
+  margin: 0 0 14px;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Kessel105Text-Book' format('truetype');
+  src: url('/assets/fonts/kessel-105-text-heavy-oblique.ttf');
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.arrow-button {
+  margin: 0 5px; 
+  background-color: #ac0904 !important;
+}
+
+.arrow-button:hover {
+margin: 0 5px; 
+background-color: #e00c05 !important;
+}
+
+.arrow-button .fa {
+color: antiquewhite;
+}
+
+.carousel-item img {
+width: 550px;
+height: 370px;
+/* object-fit: cover; */
+}
+
+.vista {
+display: flex;
+}
+
+.texto {
+margin-left: 40px; 
+padding: 10px;
+overflow-y: auto; 
+max-height: 370px;
+
+/* Estilos de la barra de desplazamiento */
+scrollbar-width: thin; /* Firefox */
+scrollbar-color: #999 #ddd; /* Firefox */
+
+/* WebKit (Chrome, Safari, etc.) */
+&::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: #333333; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 4px; /* Radio de borde del pulgar */
+}
+
+&::-webkit-scrollbar-track {
+  background-color: #ddd; /* Color del fondo de la barra de desplazamiento */
+}
+}
+
+.img-pers {
+  width: 312px;
+  height: 243px;
+}
+
+@media screen and (max-width: 399px){
+
+.carousel-item img {
+  width: 450px;
+  height: 370px;
+  object-fit: cover;
+}
+
+.vista {
+  display: block;
+}
+
+.texto {
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  overflow-y: auto; 
+  max-height: 370px;
+  margin-left: -3px;
+  width: 100%;
+ }
+
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+  .carousel-item img {
+    width: 450px;
+    height: 370px;
+    object-fit: cover;
+}
+}
+
+ @media only screen and (min-width: 400px) and (max-width: 1000px) {
+  .carousel-item img {
+    width: 660px;
+    height: 370px;
+    object-fit: cover;
+  }
+
+  .vista {
+    display: block;
+  }
+
+  .texto {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: -1px;
+    overflow-y: auto;
+    width: 100%;
+    max-height: 360px;
+
+
+/* Estilos de la barra de desplazamiento */
+scrollbar-width: thin; /* Firefox */
+scrollbar-color: #999 #ddd; /* Firefox */
+
+/* WebKit (Chrome, Safari, etc.) */
+&::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: #333333; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 4px; /* Radio de borde del pulgar */
+}
+
+&::-webkit-scrollbar-track {
+  background-color: #ddd; /* Color del fondo de la barra de desplazamiento */
+}
+   }
+
+   .img-pers {
+    width: 470px;
+    height: 243px;
+  }
+
+  }
+

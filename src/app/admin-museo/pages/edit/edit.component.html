@@ -1,0 +1,135 @@
+
+<div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+<div *ngIf="!loading" class="container-fluid ">
+
+    <div class="card card d-flex flex-column">
+        <div class="card-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span id="card_title">
+                    <h3>Editar Contenido</h3>
+                </span>
+
+               
+            </div>
+            
+            <div class="card-body flex-grow-1">
+
+                <form [formGroup]="formEdit">
+
+                    <div class="example-inline-container">
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Tipo de Contenido</mat-label>
+                            <mat-select formControlName="tipo" required>
+                              <mat-option value="Evento">Evento</mat-option>
+                              <mat-option value="Noticia">Noticia</mat-option>
+                              <mat-option value="Visita">Visita</mat-option>
+                              <mat-option value="Muestra">Muestra</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                            <mat-form-field *ngIf="formEdit.get('tipo')?.value === 'Evento' || formEdit.get('tipo')?.value === 'Noticia'" class="example-full-width">
+                                <mat-label>Fecha</mat-label>
+                                <input matInput placeholder="Mes/Día/Año" [matDatepicker]="picker" formControlName="fecha" [required]="formEdit.get('tipo')?.value === 'Evento' || formEdit.get('tipo')?.value === 'Noticia'" readonly>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+
+                    </div>
+
+                    <mat-form-field class="example-linea3">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="nombre" required>
+                      </mat-form-field>
+
+                    <mat-form-field *ngIf="formEdit.get('tipo')?.value === 'Evento' || formEdit.get('tipo')?.value === 'Noticia'" class="example-linea3">
+                        <mat-label>Reseña</mat-label>
+                        <input matInput formControlName="info" [required]="formEdit.get('tipo')?.value === 'Evento' || formEdit.get('tipo')?.value === 'Noticia'">
+                      </mat-form-field>
+
+                    <div class="example-linea3">
+                        <mat-form-field class="example-full-widthlinea4" >
+                            <mat-label>Descripción</mat-label>
+                            <textarea matInput formControlName="detalles" required rows="5"></textarea>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <div>
+                            <mat-checkbox (change)=" onCheckboxChange()" formControlName="principal" color="primary" [hidden]="formEdit.get('programado')?.value == true">
+                                Principal
+                            </mat-checkbox>
+
+                            <mat-checkbox *ngIf="(formEdit.get('tipo')?.value === 'Evento' || formEdit.get('tipo')?.value === 'Noticia') && formEdit.get('principal')?.value" [hidden]="formEdit.get('programado')?.value == true" formControlName="prioridad" color="primary">
+                              Prioridad
+                          </mat-checkbox>
+
+                        <mat-checkbox *ngIf="formEdit.get('tipo')?.value === 'Evento'" formControlName="programado" color="primary">
+                          Programado
+                      </mat-checkbox>
+
+                        </div>
+                    </div>
+
+                    <h2 *ngIf="contenido.imagenes?.length! > 0">Galería de Imágenes</h2>
+
+                    <div class="preview-images" style="margin-top: 10px;">
+                      <div *ngFor="let imagen of contenido.imagenes">
+
+                        <mat-card class="preview-card">
+                          <img [src]="imagen.img | img" alt="Imagen de {{ contenido.nombre }}">
+                        </mat-card>
+
+                        <mat-card-actions style="margin-left: -5px; margin-top: -8px;">
+                          <button mat-fab color="warn" (click)="deleteImage( imagen?.id! )" class="small-button">
+                            <i class="fa fa-trash"></i>
+                          </button>
+                        </mat-card-actions>
+
+                      </div>
+                    </div>
+
+                    <div class="d-flex">
+                      <button mat-raised-button color="primary" onclick="document.getElementById('fileInput').click();">
+                      Nuevas <i class="fas fa-camera"></i>
+                      </button>
+                      <input type="file" id="fileInput" (change)="onFileSelected($event)" multiple style="display: none;">
+                    </div>
+
+                    <h2 *ngIf="selectedFiles" style="margin-top: 5px;">Nuevas Imágenes</h2>
+
+                    <div class="preview-images" style="margin-top: 10px;">
+                      <div *ngFor="let previewImg of previewImgs; let i = index">
+
+                        <mat-card class="preview-card">
+                          <img [src]="previewImg" alt="Preview Image">
+                        </mat-card>
+
+                        <mat-card-actions style="margin-left: -5px; margin-top: -8px;">
+                          <button mat-fab color="warn" (click)="removeImage(i)" class="small-button">
+                            <i class="fa fa-trash"></i>
+                          </button>
+                        </mat-card-actions>
+
+                      </div>
+                    </div>
+
+                    <div class="example-container">
+                      <button mat-raised-button type="submit" (click)="editContent()" class="custom-button" >Aceptar</button>
+                     </div>
+                  </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+

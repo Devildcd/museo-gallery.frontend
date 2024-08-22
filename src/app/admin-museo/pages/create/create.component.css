@@ -1,0 +1,74 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-inline-container {
+    display: flex;
+  }
+  
+  .example-full-width {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  /* linea 2 del formulario */
+  .example-linea2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* linea 3 del formulario */
+  .example-linea3 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .example-linea3 mat-form-field {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .example-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .custom-button {
+    background-color: #212529!important;
+    color: white!important;
+  }
+
+  .custom-button:hover {
+    background-color: rgb(56, 56, 56)!important;
+  }
+
+  .preview-images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 10px;
+  }
+  
+  .preview-card {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .preview-card img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .small-button {
+    width: 30px;
+    height: 30px;
+    /* padding: 5px; */
+  }
+  
+  

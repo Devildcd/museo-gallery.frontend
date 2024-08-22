@@ -1,0 +1,114 @@
+
+<div class="container-fluid ">
+
+    <div class="card card d-flex flex-column">
+        <div class="card-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span id="card_title">
+                    <h3>Crear Contenido</h3>
+                </span>
+
+               
+            </div>
+
+            <div class="card-body flex-grow-1">
+
+                <form [formGroup]="formCreate">
+
+                    <div class="example-inline-container">
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Tipo de Contenido</mat-label>
+                            <mat-select formControlName="tipo" required>
+                              <mat-option value="Evento">Evento</mat-option>
+                              <mat-option value="Noticia">Noticia</mat-option>
+                              <mat-option value="Visita">Visita</mat-option>
+                              <mat-option value="Muestra">Muestra</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                            <mat-form-field *ngIf="formCreate.get('tipo')?.value === 'Evento' || formCreate.get('tipo')?.value === 'Noticia'" class="example-full-width">
+                                <mat-label>Fecha</mat-label>
+                                <input matInput placeholder="Mes/Día/Año" [matDatepicker]="picker" formControlName="fecha" [required]="formCreate.get('tipo')?.value === 'Evento' || formCreate.get('tipo')?.value === 'Noticia'" readonly>
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+
+                    </div>
+
+                    <mat-form-field class="example-linea3">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="nombre" required>
+                      </mat-form-field>
+
+                    <mat-form-field *ngIf="formCreate.get('tipo')?.value === 'Evento' || formCreate.get('tipo')?.value === 'Noticia'" class="example-linea3">
+                        <mat-label>Reseña</mat-label>
+                        <input matInput formControlName="info" [required]="formCreate.get('tipo')?.value === 'Evento' || formCreate.get('tipo')?.value === 'Noticia'">
+                      </mat-form-field>
+
+                    <div class="example-linea3">
+                        <mat-form-field class="example-full-widthlinea4" >
+                            <mat-label>Descripción</mat-label>
+                            <textarea matInput formControlName="detalles" required rows="5"></textarea>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                      <div>
+                        <mat-checkbox
+                          *ngIf="(formCreate.get('tipo')?.value === 'Noticia' && cantNoticiasPrincipales < 4) || (formCreate.get('tipo')?.value === 'Evento' && cantEventosPrincipales < 4) || (formCreate.get('tipo')?.value === 'Muestra' || (formCreate.get('tipo')?.value === 'Visita') )"
+                          formControlName="principal" color="primary" [hidden]="formCreate.get('programado')?.value == true">
+                          Principal
+                        </mat-checkbox>
+                  
+                        <mat-checkbox
+                        *ngIf="formCreate.get('principal')?.value  && (formCreate.get('tipo')?.value === 'Evento' || formCreate.get('tipo')?.value === 'Noticia')"
+                          formControlName="prioridad" color="primary" [hidden]="formCreate.get('programado')?.value == true">
+                          Prioridad
+                        </mat-checkbox>
+
+                        <mat-checkbox *ngIf="formCreate.get('tipo')?.value === 'Evento'" formControlName="programado" color="primary">
+                          Programado
+                        </mat-checkbox>
+                      </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <button mat-raised-button color="primary" onclick="document.getElementById('fileInput').click();">
+                          imágenes <i class="fas fa-camera"></i>
+                        </button>
+                        <input type="file" id="fileInput" (change)="onFileSelected($event)" multiple style="display: none;">
+                      </div>
+
+                      <div class="preview-images" style="margin-top: 10px;">
+                        <div *ngFor="let previewImg of previewImgs; let i = index">
+
+                          <mat-card class="preview-card">
+                            <img [src]="previewImg" alt="Preview Image">
+                          </mat-card>
+
+                          <mat-card-actions style="margin-left: -5px; margin-top: -8px;">
+                            <button mat-fab color="warn" (click)="removeImage(i)" class="small-button">
+                              <i class="fa fa-trash"></i>
+                            </button>
+                          </mat-card-actions>
+
+                        </div>
+                      </div>
+
+                   <div class="example-container">
+                    <button mat-raised-button type="submit" (click)="saveContent()" class="custom-button" >Aceptar</button>
+                   </div>
+                    
+                  </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+

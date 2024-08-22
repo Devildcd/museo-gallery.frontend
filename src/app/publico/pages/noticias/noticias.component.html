@@ -1,0 +1,230 @@
+
+<!--codigo de los botones flotantes -->
+<app-botones-flotantes></app-botones-flotantes>
+
+<div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+<!-- <div *ngIf="!loading"> -->
+    <div class="banner-container" style="display: flex; justify-content: center; align-items: center; width: 100%; height: auto; background-size: cover; background-position: center; position: relative;">
+        <img src="assets/img/05-grande2.jpg"  style="width: 120%; height: 500px; margin-top: 0px; z-index: 0;" class="d-block w-100" alt="...">
+      </div>
+<!-- </div>  -->
+
+<section class="section section-no-border pt-0 pb-5 m-0 callout-dark heading-title heading-arrow-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 text-center offset-lg-1">
+                <h3 class="mb-0">Noticias</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CALLOUT blanco ARROW BOTTOM -->
+<section class="callout-blanco heading-title heading-arrow3-bottom about-section">
+
+    <div class="home-intro3 margen-superior">
+
+        <div id="div1" [ngClass]="{'animate__animated': isVisible1, 'animate__fadeIn': isVisible1}" class="container">
+            <div class="row pb-1">
+                <div class="col-sm-12 mb-4">
+                    <div class="text-left">
+                        <div class="mb-2">
+                            <h4 class="animate__animated animate__lightSpeedInRight">Principales</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row pb-1">
+               
+                    <!-- Principales -->
+                    <div class="blog-posts animate__animated animate__fadeIn">
+
+                        <div class="row px-3" style="margin-left: -60px;">
+                            <div class="scrollable-container">
+                                <div  class="preview-images">
+                                <div *ngFor="let noticia of coincidencias">
+                                    <article *ngIf="noticia.principal" class="post post-medium border-0 pb-0 mb-5">
+                                        <div class="post-image">
+                                            
+                                            <a [routerLink]="['/museo/detalles', noticia.id]"  (click)="incrementarVisitas(noticia.id!)" (mouseenter)="isHoveredStatesPrincipal[noticia.id!] = true" (mouseleave)="isHoveredStatesPrincipal[noticia.id!] = false">
+                                                <img [src]="noticia.imagenes?.[0]?.img | img " [ngClass]="{'zoomed-image': isHoveredStatesPrincipal[noticia.id!]}" alt="" />
+                                            </a>
+                                        </div>
+    
+                                        <div class="post-content post-content-pers" style="margin-top: 10px;">
+                                            <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2">
+                                              <a [routerLink]="['/museo/detalles', noticia.id]" style="text-decoration: underline;">
+                                                <p class="text-justify" style="width: 230px;"> {{noticia.nombre}} </p>
+                                              </a>
+                                            </h2>
+                                            <div class="post-meta" style="margin-top: -10px;">
+                                              <span class="date">{{noticia.fecha?.toLocaleDateString()}}</span>
+                                              <span class="d-flex align-items-center">
+                                                <i class="far fa-eye mr-2" style="font-size: 15px;"></i>
+                                                <span  style="margin-left: 3px;">{{noticia.visitas}}</span>
+                                            </span>
+                                            </div>
+                                            <div class="post-meta">
+                                              <span class="d-block mt-2">
+                                                <a [routerLink]="['/museo/detalles', noticia.id]" (click)="incrementarVisitas(noticia.id!)">
+                                                    <button class="boton-eventos" mat-raised-button color="warn">Ver</button>
+                                                </a>                                           
+                                              </span>
+                                            </div>
+                                          </div>
+                                    </article>
+                                </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Todos -->
+            <div id="div2" [ngClass]="{'animate__animated': isVisible2, 'animate__slideInLeft': isVisible2}" class="row pb-1 pt-2">
+
+                <div class="col-md-9">
+                    <div class="col-sm-9  pb-3">
+                        <div class="text-left">
+                            <div class="mb-2 d-flex align-items-center">
+                                <h4>Todas nuestras noticias</h4>
+                                <i *ngIf="campoBuscar == false" class="fa fa-search" (click)="activarBuscador()" style="margin-left: 5px; color: rgb(70, 69, 69);"></i>
+                                <i *ngIf="campoBuscar == true" class="fa fa-times" (click)="desactivarBuscador()" style="margin-left: 5px; color: rgb(70, 69, 69);"></i>
+                            </div>
+
+                            <div *ngIf="campoBuscar == true">
+                                <div class="col-sm-8">
+                                    <input type="text" [(ngModel)]="terminoBusqueda" (input)="filterData()" class="form-control input-pers" placeholder="Buscar" >
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lista -->
+
+                    <div class="d-flex justify-content-between flex-wrap">
+                    
+                        <div class="row">
+                        <div *ngFor="let noticia of coincidencias | paginate: { itemsPerPage: 6, currentPage: p }"
+                                class="col-8 col-sm-6 col-md-4 mb-4" style="margin-right: 50px; margin-left: -50px;">
+                                <article class="post post-medium border-0 pb-0 mb-5 movil-post">
+                                    <div class="post-image">
+                                        <a [routerLink]="['/museo/detalles', noticia.id]" (click)="incrementarVisitas(noticia.id!)" (mouseenter)="imageHoverStates[noticia.id!] = true" (mouseleave)="imageHoverStates[noticia.id!] = false">
+                                            <img [src]=" noticia.imagenes?.[0]?.img | img" [ngClass]="{'zoomed-image': imageHoverStates[noticia.id!]}"
+                                                class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0 post-all" alt=""
+                                               />
+                                        </a>
+                                    </div>
+                                    <div class="movil-post-content">
+                                        <div class="post-content post-content-pers" style="margin-top: 10px;">
+                                            <h2 class="font-weight-semibold text-5 line-height-6 mt-3 mb-2">
+                                                <a>
+                                                    <p class="movil-text text-justify"> {{noticia.nombre}} </p>
+                                                </a>
+                                            </h2>
+                                            <div class="post-meta" style="margin-top: -10px;">
+                                                <span class="date"> {{noticia.fecha?.toLocaleDateString()}} </span>
+                                                <span class="d-flex align-items-center">
+                                                    <i class="far fa-eye mr-2" style="font-size: 15px;"></i>
+                                                    <span style="margin-left: 3px;">{{noticia.visitas}}</span>
+                                                </span>
+                                            </div>
+                                            <!-- <div class="post-meta">
+                                                <span class="d-block mt-2">
+                                                    <a [routerLink]="['/museo/detalles', evento.id]" (click)="incrementarVisitas(evento.id!)">
+                                                        <button class="boton-eventos" mat-raised-button color="warn">Ver</button>
+                                                    </a>
+                                                </span>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                   
+                                </article>
+                            
+                    </div>
+                                                
+                        </div>
+                    
+                    
+                    </div>
+                    
+                    </div>
+                    
+                    <!-- Programacion de eventos -->
+                    <div class="col-md-3">
+                    
+                        <div class="text-left">
+                            <div class="mb-2">
+                                <h4>Más seguidas</h4>
+                            </div>
+                        </div>
+                    
+                        <div class="pb-2" style="overflow-y: auto; max-height: 700px;">
+                    
+                            <div class="mb-4 pb-2">
+                    
+                                <ul class="simple-post-list">
+                    
+                                    <li *ngFor=" let noticiaMasVisitada of noticiasMasVisitadas.slice(0,9)">
+                                        <div>
+                                         <article style="padding-bottom: 10px;">
+                                            <div class="feature-box feature-box-style-2">
+                                                <div class="feature-box-icon">
+                                                    <i class="fa fa-star" aria-hidden="true" style="color: #ff9100; margin-top: -10px;"></i>
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-meta">
+                                                        <h4 class="font-weight-normal text-3 mb-0" style="width: 200px; margin-left: 5px;">
+                    
+                                                            <a>
+                                                               {{noticiaMasVisitada.nombre}} 
+                                                            </a>
+                                                        </h4>
+                    
+                                                        <span class="date">
+                                                            {{noticiaMasVisitada.fecha?.toLocaleDateString()}}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article></div>
+                                       
+                                    </li>
+                    
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- /CALLOUT ARROW BOTTOM -->
+  <!-- Section para el Paginador -->
+  <div class="d-flex pagination justify-content-center pagination-pers">
+    <pagination-controls class="my-pagination" (pageChange)="p = $event" previousLabel="" nextLabel="">
+      <span class="custom-next">Next</span>
+    </pagination-controls>
+  </div>
+
+
+
+ 
+
+
+
+  

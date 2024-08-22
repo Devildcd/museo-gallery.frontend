@@ -1,0 +1,308 @@
+
+<div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+<!-- aqui va el codigo de los botones flotantes -->
+
+<app-botones-flotantes></app-botones-flotantes>
+
+<!-- cabecera pagina -->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/moncada/bannerhistoria.jpg" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; object-fit: cover;" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/moncada/banner/salas.jpg" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; object-fit: cover;" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/moncada/muestra.jpg" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; object-fit: cover;" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+
+
+<!-- intro de historia-->
+
+
+<section class="section section-no-border pt-0 pb-5 m-0 callout-dark heading-title heading-arrow-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 text-center offset-lg-1">
+                <h3 class="mb-0">Museo Histórico 26 de Julio</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- seccion tabs de historia-->
+<!--slides tabs otra variante para la seccion de las salas -->
+<!-- <div *ngIf="!loading"> -->
+<section class="section  mt-5  border-0 callout-blanco heading-title heading-arrow3-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <img src="assets/img/moncada/historia/museo.jpg" style="width: 100%;" class="img-fluid imagen-hover" alt="" />
+            </div>
+            <div class="col-lg-6">
+                <h5 class=" mb-4">
+                    
+                </h5>
+                <div class="scrollable visible-slider has-scrollabar" data-plugin-scrollable style="height: 400px;">
+                    <div class="scrollable-content" style="height: 386px;">
+                        <p align="justify" class="mb-2">
+                           
+                        </p>
+
+
+                        <p class="text-justify">
+                            El Museo forma parte de la Red de Museos del 26 de Julio. La institución fue fundada oficialmente el 26 de Julio de 1967 y se encuentra ubicada en uno de los pabellones de la Ciudad Escolar 26 de Julio, contiguo a la histórica Posta 3, por donde un grupo de combatientes al mando del joven Fidel Castro Ruz, intentaron tomar la otrora fortaleza militar. A través de 8 salas interactivas, diseñadas de forma didáctica, educativa y con el uso de las nuevas tecnologías, se aborda como temática fundamental los hechos ocurridos el 26 de Julio de 1953 y los sucesos posteriores a esto hasta el triunfo revolucionario el 1ro de enero de 1959. 
+Se exponen también pertenencias de los asaltantes a la fortaleza militar, uniformes ensangrentados, armas de fuego capturadas al ejército de Batista en diferentes acciones combativas, una réplica en miniatura del yate Granma, el camión en que fuera trasladado en calidad de prisionero el joven abogado Fidel Castro Ruz y una maqueta del cuartel Moncada con las edificaciones aledañas donde se aprecian los lugares desde los cuales se llevaron a cabo las acciones.
+
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="scrollable-pane" style="opacity: 1; visibility:visible; ">
+                        <!--	 <div class="scrollable-slider" style="height: 91px; transform: translate(0px, 0px);"></div> -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--fin del row  -->
+    </div>
+    <!--fin del container  -->
+</section>
+
+<!-- fin seccion tabs de historia-->
+<!--  seccion cronologia-->
+<section class="border-0 bg-transparent margen-superior">
+    <div class="container">
+        <div class="row">
+            <div class="col text-left">
+                <h5 class=" mb-4">Museo histórico 26 de julio como institución cultural </h5>
+            </div>
+
+            <div class="col-xl-12">
+
+
+                <section class="timeline custom-timeline">
+                    <div class="timeline-body">
+
+                        <div data-plugin-options="{'minWindowWidth': 0}">
+                            <div class="timeline-box right">
+                                <div class="timeline-box-time">
+                                    <strong class="text-dark"> 1967</strong>
+                                </div>
+                                <div class="timeline-box-arrow"></div>
+                                <div class="timeline-box-content clearfix">
+                                    <p class="m-0">Siete años después de haberse convertido la fortaleza en Ciudad Escolar 26 de julio, y con motivo del XIV Aniversario de los hechos ocurridos en el Cuartel Moncada en igual fecha, pero en 1953, se inauguró una nueva exposición en el local que ocupaba la Dirección Regional de Educación.
+                                        Con el título ¨Del Moncada a la Sierra ¨ se exponía un recorrido por la historia de Cuba, desde el alzamiento del 10 de octubre de 1868 hasta la primera invasión mercenaria financiada por los Estados Unidos, en abril de 1961. En ese primer instante, se caracterizó por la presentación de grandes fotografías destacando figuras y hechos relevantes de las distintas etapas de la Revolución Cubana.
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-plugin-options="{'minWindowWidth': 0}">
+                            <div class="timeline-box right">
+                                <div class="timeline-box-time">
+                                    <strong class="text-dark">1973</strong>
+                                </div>
+                                <div class="timeline-box-arrow"></div>
+                                <div class="timeline-box-content clearfix">
+                                    <p class="m-0">Al celebrarse el XX aniversario del asalto al cuartel por Fidel y sus compañeros de lucha, se representó a través de 10 salas el período histórico que va desde la llegada de los españoles hasta el triunfo revolucionario del 1ro de enero de 1959 titulada “Cien años de lucha”. De manera formal, la institución comenzó a ser identificada con el nombre de Museo Histórico 26 de Julio y un año más tarde, con el montaje de un equipo de video tape y tres circuitos cerrados, se apoyó la exposición con la presentación de imágenes fijas y sonido de fondo. De igual modo, se filmaron los recibimientos de los pioneros de la Ciudad Escolar a las visitas de primer nivel que visitaban la institución, materiales estos que se muestran a los visitantes en la sala de exposición permanente.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-plugin-options="{'minWindowWidth': 0}">
+                            <div class="timeline-box right">
+                                <div class="timeline-box-time">
+                                    <strong class="text-dark">1998</strong>
+                                </div>
+                                <div class="timeline-box-arrow"></div>
+                                <div class="timeline-box-content clearfix">
+                                    <p class="m-0">Se particularizó la información a partir de lo relacionado con la acción del Moncada, desde sus antecedentes y resultados hasta el triunfo el 1ro de enero de 1959. Hacia el 2003 se incorporaron nuevos exponentes y elementos didácticos para enriquecer la calidad del montaje museográfico. En el campo de la investigación, se han desarrollado numerosos estudios de colecciones y guiones museológicos que se han socializado para el beneplácito de visitantes nacionales e internacionales. </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- fin seccion cronología-->
+
+<!-- seccion del plano del moncada-->
+<!-- seccion de la galeria de imagenes del moncada-->
+<div class="content bg-light overflow-hidden p-relative">
+
+    <section id="div1" [ngClass]="{'animate__animated': isVisible1, 'animate__fadeInLeft': isVisible1}" class="section bg-transparent border-0 pb-0 mb-0 p-relative overflow-hidden">
+        <div class="container pt-5 pb-5 mb-3">
+        
+         <app-salas></app-salas>
+
+        </div>
+    </section>
+
+
+</div>
+
+
+
+<!-- visita personalidades-->
+<section id="div2" [ngClass]="{'animate__animated': isVisible2, 'animate__fadeInRight': isVisible2}" class="callout-blanco heading-title  about-section" style="background-color: #fcf9f9;">
+
+    <div class="home-intro3 margen-superior">
+
+        <div class="container">
+            <div class="row pb-1">
+                <div class="col-sm-7 col-md-7 col-lg-7 pb-3">
+                    <div class="text-left">
+                        <div class="mb-2">
+                            <h5>Visitas de personalidades</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slick">
+                    <ngx-slick-carousel class="carousel" #slickmodal="slick-carousel" [config]="slideConfig">
+                        <div ngxSlickItem *ngFor="let imagen of imagenesVisita; let i = index" class="slide">
+                            <img src="{{ imagen.img | img }}" class="img-fluid imagen-personalizada">
+                        </div>
+                    </ngx-slick-carousel>
+                    
+                  </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" (mouseenter)="imageHoverBanner = true" (mouseleave)="imageHoverBanner = false">
+            <img [src]="visitas[0]?.imagenes?.[0]?.img | img" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; filter: brightness(75%);" 
+            [ngClass]="{'zoomed-image': imageHoverBanner}" class="d-block w-100 imagen-banner" alt="...">
+            <div *ngIf="imageHoverBanner" (mouseenter)="$event.stopPropagation()" style="position: absolute; top: 75%; left: 45%; transform: translate(-50%, -50%); z-index: 1; width: 80%; height: auto;">
+              <div class="testimonial-with-quotes testimonial-remove-right-quote mb-0" style="text-align: right;">
+                <blockquote style="max-width: 600px;">
+                    <h3 class="mb-0 text-color-light" style="text-align: left;">{{ visitas[0]?.nombre }}</h3>
+                    <p class="mb-0 text-color-light text-justify texto" >{{ visitas[0]?.detalles }}</p>
+                </blockquote>
+            </div>
+            </div>
+          </div>
+      
+          <div class="carousel-item"  *ngFor="let visita of visitas" (mouseenter)="imageHoverBanner = true" (mouseleave)="imageHoverBanner = false">
+            <img [src]="visita?.imagenes?.[0]?.img | img" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; filter: brightness(75%);" 
+            [ngClass]="{'zoomed-image': imageHoverBanner}" class="d-block w-100 imagen-banner" alt="...">
+            <div *ngIf="imageHoverBanner" (mouseenter)="$event.stopPropagation()" style="position: absolute; top: 75%; left: 45%; transform: translate(-50%, -50%); z-index: 1; width: 80%; height: auto;">
+              <div class="testimonial-with-quotes testimonial-remove-right-quote mb-0" style="text-align: right;">
+                <blockquote style="max-width: 600px;">
+                    <h3 class="mb-0 text-color-light" style="text-align: left;">{{ visita.nombre }}</h3>
+                    <p class="mb-0 text-color-light text-justify texto" >{{ visita.detalles }}</p>
+                </blockquote>
+            </div>
+            </div>
+          </div>
+      
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        
+      </div>
+      
+    
+
+</section>
+
+<!-- end a enlaces historia -->
+
+<!-- CALLOUT MUESTRA DEL MES rojo ARROW BOTTOM -->
+<section class="callout-rojo heading-title heading-arrow2-bottom">
+
+    <div class="home-intro2 margen-superior margen-inferior">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="title">
+                        <h5 class="mb-3-5">Información</h5>
+
+                    </div>
+
+                    <div>
+                        <p align="left" class="mb-2">El Museo Histórico 26 de Julio abre sus puertas, y usted puede conocer nuestros horarios para programar sus visitas a nuestro museo en los sitios oficiales de la misma institución o del Centro Provincial de Patrimonio Cultural. Podrá conocer más sobre esta etapa de nuestra historia ya sea de forma independiente o de la mano de un guía. Las entradas tendrán un costo de acuerdo a la edad; estas pueden ser pagadas en la recepción del museo a la hora de visitarnos. Si desea obtener alguna información o hacer alguna consulta puede contactarnos a través de nuestro sitio web y con placer atenderemos sus necesidades.</p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- /CALLOUT ARROW BOTTOM -->
+<!--End muestra del mes Section -->
+
+
+
+<!-- otra seccion imagen con tooltips-->
+<section>
+    <div class="contener">
+        <img src="assets/img/moncada/mapa/mapa3.jpg" alt="mapa">
+        <div class="todos-los-tooltips">
+            <div class="etiqueta tooltip-1">
+                <div class="pin">
+
+                </div>
+
+
+                <div class="tooltip-contenido">
+                    <div class="arrow"></div>
+
+
+
+                    <div class="img">
+                        <img src="assets/img/moncada/contacto1.jpg" alt="">
+                    </div>
+
+                    <div class="contenidof">
+                        <h1>Museo histórico 26 de julio</h1>
+                        <p>Ubicado en Ave Moncada, Santiago de Cuba. El museo se encuentra en uno de los pabellones de la Ciudad Escolar 26 de Julio, contiguo a la histórica posta 3. </p>
+                    </div>
+                </div>
+
+
+                <!-- <div data-map-hover="<div class='popup'><img src='assets/img/moncada/contacto1.jpg' width='200' height='200'></div>">Marcador</div> -->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- </div> -->
+
+
+  

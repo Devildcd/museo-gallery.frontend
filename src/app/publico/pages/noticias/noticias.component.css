@@ -1,0 +1,193 @@
+.carousel-item img {
+  width: 100%;
+  height: 500px; /* ajusta la altura según tus necesidades */
+  object-fit: cover;
+}
+
+.preview-images {
+  display: flex;
+  
+  margin-bottom: 10px;
+}
+
+.preview-card {
+  margin-right: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.post {
+  margin-left: 50px;
+}
+
+.post-image img {
+  width: 230px;
+  height: 200px; /* ajusta la altura según tus necesidades */
+  object-fit: cover;
+  margin: 10px;
+}
+
+.boton-eventos {
+  background-color: #ac0904 !important;
+}
+
+
+.eventos-images {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.eventos-card {
+  margin-right: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+  background-color: #ac0904 !important;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .next {
+  background-color: #ac0904 !important;
+}
+
+.pagination-pers {
+  margin-top: -50px; 
+  padding-right:430px;
+}
+
+.input-pers {
+  margin-left: 10px;
+}
+
+.post-content-pers {
+  margin-top: 10px; 
+  margin-left: 10px;
+}
+
+.zoomed-image {
+  transform: scale(1.1); /* Modifica el valor según el nivel de zoom deseado */
+  transition: transform 0.5s ease; /* Agrega una transición suave para el efecto */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Modifica el valor del canal alfa (0.3) para ajustar la opacidad del oscurecimiento */
+}
+
+.movil-text {
+  width: 150px;
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+  font: 'Kessel105Text-Book';
+}
+
+h5{
+  font-family: 'Kessel105Text-Book';
+  font: 'Kessel105Text-Book';
+  font-size: 17pt;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 15pt;
+  line-height: 27px;
+  margin: 0 0 14px;
+  font-weight: bold;
+}
+
+
+
+@font-face {
+  font-family: 'Kessel105Text-Book' format('truetype');
+  src: url('/assets/fonts/kessel-105-text-heavy-oblique.ttf');
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+}
+
+.post-all {
+  max-width: 150px; 
+  max-height: 100px;
+}
+
+
+
+
+
+@media screen and (max-width: 700px){
+  .post-all {
+    max-width: 150px; 
+    max-height: 125px;
+  }
+
+  .movil-post {
+    display: flex;
+  }
+
+  .movil-post-content {
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+
+  .movil-text {
+    width: 200px;
+  }
+
+  .scrollable-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .pagination-pers {
+    margin-top: -50px;
+    padding-right: 0; 
+  }
+
+  .post-content-pers {
+    margin-top: 10px; 
+    margin-left: 0px;
+  }
+
+  .post-image img {
+    margin: 0px;
+   
+  }
+
+  .input-pers {
+    margin-left: 0px;
+  }
+
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1200px){
+  .scrollable-container {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #999 #ddd; /* Firefox */ 
+}
+
+.pagination-pers {
+  margin-top: -50px;
+  padding-right: 0; 
+}
+
+
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
+
+

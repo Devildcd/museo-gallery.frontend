@@ -1,0 +1,9 @@
+.sidebar-hidden #sidebar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .wrapper.sidebar-hidden #sidebar {
+      display: none;
+    }
+  }

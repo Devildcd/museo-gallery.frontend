@@ -1,0 +1,85 @@
+
+<body class="sb-nav-fixed">
+    
+
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html"><img id="logo" alt="moncada" src="assets/img/moncada/logo/logoblanco2.png" width="120px"></a>
+        <!-- Sidebar Toggle-->
+        <button  class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" (click)="onSidebarToggleClick()"><i
+                class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link " (click)="closeSesion()" role="button" 
+                     style="text-decoration: none;">Salir<i class="fa fa-share" style="margin-left: 5px;"></i></a>
+                
+            </li>
+        </ul>
+    </nav>
+    
+
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Contenido</div>
+                    
+                        <a class="nav-link"  [routerLink]="['/manager/eventos']" [routerLinkActive] = "['active']">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Eventos
+                        </a>
+            
+                        <a class="nav-link" [routerLink]="['/manager/noticias']" [routerLinkActive] = "['active']">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Noticias
+                        </a>
+            
+                        <a class="nav-link" [routerLink]="['/manager/visitas-personalidades']" [routerLinkActive] = "['active']">
+                            <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+                            Visitas
+                        </a>
+            
+                        <a class="nav-link" [routerLink]="['/manager/muestras-mensuales']" [routerLinkActive] = "['active']">
+                            <div class="sb-nav-link-icon"><i class="fa fa-tasks" aria-hidden="true"></i></div>
+                            Muestras
+                        </a>
+            
+                        <a class="nav-link" [routerLink]="['/manager/videos']" [routerLinkActive] = "['active']">
+                            <div class="sb-nav-link-icon"><i class="fas fa-video"></i></div>
+                           Videos
+                        </a>
+            
+                    </div>
+                </div>
+                
+            </nav>
+        </div>
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    
+                    <div class="row">
+
+                        <div class="col-md-12" style="margin-top: 20px;">
+                            <router-outlet></router-outlet>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+            
+        </div>
+    </div>
+
+</body>
+

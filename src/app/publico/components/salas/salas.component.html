@@ -1,0 +1,62 @@
+
+<section class="section bg-transparent border-0 pb-0 mb-0 p-relative overflow-hidden">
+    <div class="container pt-5 pb-5 mb-3">
+        <div class="row">
+            <div class="col text-left">
+                <h5>Salas del museo</h5>
+                <p>Selecciones una de las salas y conozca todo sobre nuestra historia.</p>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="image-hotspots">
+                <img src="assets/img/moncada/salas/planosalas.jpg" class="img-fluid" />
+
+                <a [routerLink]="['/museo/sala1']" style="left: 70%; top: 55%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title='' data-title='Sala 1: Doctrinas del Maestro'  tabindex="0">
+                  <p class="circle">1</p>
+                </a>
+
+                <a [routerLink]="['/museo/sala2']" style="left: 55%; top: 55%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title="" data-title='Sala 2: "La Fortaleza Militar"' tabindex="0">
+                    <p class="circle">2</p>
+                </a>
+
+                <a [routerLink]="['/museo/sala3']" style="left: 38%; top: 55%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title="" data-title='Sala 3: "Los Preparativos del Asalto"' tabindex="0">
+                    <p class="circle">3</p>
+                </a>
+
+                <a [routerLink]="['/museo/sala4']" style="left: 23%; top: 59%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title="" data-title='Sala 4: "El Asalto"' tabindex="0">
+                    <p class="circle">4</p>
+                </a>
+                <a [routerLink]="['/museo/sala5']" style="left: 42%; top: 76%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title="" data-title='Sala 5: "La Historia me Absolverá"' tabindex="0">
+                    <p class="circle">5</p>
+                </a>
+
+                <a [routerLink]="['/museo/sala6']" style="left: 58%; top: 76%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title="" data-title='Sala 6: "Victoria de un Ideal"' tabindex="0">
+                    <p class="circle">6</p>
+                </a>
+
+                <a [routerLink]="['/museo/sala7']" style="left: 40%; top: 37%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title="" data-title='Sala 7: "Las Ideas no se Matan"' tabindex="0">
+                    <p class="circle">7</p>
+
+                </a>
+                <a [routerLink]="['/museo/sala8']" style="left: 12%; top: 68%;" class="image-hotspot image-hotspot-primary" data-bs-trigger="hover" data-bs-placement="top" title="" data-title='Sala 8: "La Represión Batistiana"' tabindex="0">
+                    <p class="circle">8</p>
+                </a>
+
+                <a (click)="openDialogSala9()" style="left: 78%; top: 76%;" class="image-hotspot image-hotspot-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="" data-title="Sala de Exposiciones Transitorias: 'Renato Guitart'" 
+                    tabindex="0">
+                    <p class="circle">9</p>
+                </a>
+
+
+                <a (click)="openDialogSala10()" style="left: 78%; top: 37%;" class="image-hotspot image-hotspot-primary" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" title="" data-title="Sala Polifuncional: 'Fernando Chenard Piña'"
+                    tabindex="0">
+                    <p class="circle">10</p>
+                </a>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>

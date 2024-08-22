@@ -1,0 +1,246 @@
+
+<!-- aqui va el codigo de los botones flotantes -->
+<app-botones-flotantes></app-botones-flotantes>
+
+<!-- cabecera pagina -->
+<section class="section section-height-4 border-0 m-0 section-overlay-opacity section-overlay-opacity-scale-3" style="background-image:url(assets/img/moncada/banner/salas.jpg)">
+    <div class="container position-relative pt-5 pb-5-5 mt-5 mb-5">
+        <div class="row justify-content-end pt-1 mt-lg-5">
+
+        </div>
+    </div>
+</section>
+
+<!-- intro de historia-->
+
+<section class="section section-no-border pt-0 pb-5 m-0 callout-dark heading-title heading-arrow-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 text-center offset-lg-1">
+                <h3 class="mb-0">SALAS DEL MUSEO</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="heading-arrow3-bottom" style="margin-bottom: 40px;">
+
+    <div class="container margen-superior margen-inferior">
+      <div class="row animate__animated animate__rollIn">
+        <div class="col-sm-10 col-md-10 col-lg-10 text-left mb-4">
+          <h5 class="mb-3">Sala1: "Doctrinas del Maestro"</h5>
+          <h4 class="mb-3" style="color: #000;">José Martí en la Generación del Centenario. </h4>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container animate__animated animate__zoomInLeft" style="margin-top: -80px;">
+      <ngx-slick-carousel class="carousel" #slickmodal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides; let i = index" class="slide">
+          <div class="row">
+  
+            <div class="vista">
+  
+              <div *ngIf="i == 0" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/moncada/salas/sala1/pared1.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/moncada/salas/sala1/retratomarti1.jpg" class="d-block" alt="...">
+                  </div>
+                </div>
+              </div>
+              <p scrollbar style="height: 370px; overflow: auto" class="text-justify texto" *ngIf="i == 0">José Julián Martí Pérez (1853-1895) Héroe nacional de Cuba.
+                Político, escritor, poeta, periodista, orador. Sufrió prisión y destierro a los diecisiete años de edad
+                por sus ideas independentista. Vivió en España, México, Guatemala y Venezuela en el año 1881 se estableció
+                definitivamente en los Estados Unidos donde preparó lo que él llamó “la guerra necesaria” para lograr la
+                independencia de Cuba, proceso que lideró por su gran talento.
+  
+                El 11 de abril de 1895 desembarca en Cuba para incorporarse a la lucha armada. Su pensamiento es fuente
+                nutricia del patriotismo, el latinoamericanismo, el antimperialismo y el antirracismo que forman parte de
+                la cultura política del pueblo cubano. El 19 de mayo de 1895 cae en combate. </p>
+            </div>
+  
+          </div>
+  
+          <div class="row">
+  
+            <div class="vista">
+  
+              <div *ngIf="i == 1" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/moncada/salas/sala1/chaleco1.jpg" class="d-block" alt="...">
+                  </div>
+                </div>
+              </div>
+              <p scrollbar style="height: 370px; overflow: auto" class="text-justify texto" *ngIf="i == 1">En la sala se exhibe un chaleco original utilizado por José Martí, el que dejó olvidado en una de sus visitas a Haití en 1892, durante los preparativos de la Guerra de Independencia de 1895, la prenda quedó bajo el cuidado de la familia de Tranquilino Callejas, cuyos descendientes la trajeron a Cuba y con posterioridad decidieron donarla, se expone en el museo desde 1998.  </p>
+            </div>
+  
+          </div>
+  
+          <div class="row">
+  
+            <div class="vista">
+  
+              <div *ngIf="i == 2" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/moncada/salas/sala1/asaltantes.jpg" class="d-block" alt="...">
+                  </div>
+                </div>
+              </div>
+              <p scrollbar style="height: 370px; overflow: auto" class="text-justify texto" *ngIf="i == 2">El 26 de julio del 1953, un grupo de jóvenes encabezados por
+                Fidel Castro, se inspiraron en las ideas independentistas de Jose´Martí y atacaron el cuartel Moncada,
+                después de los sucesos, el joven abogado Fidel Castro fue sometido
+                a un proceso judicial iniciado el 21 de septiembre del 1953, donde destacó el compromiso con la historia
+                de Cuba, sus héroes y mártires y en especial destacó al héroe nacional a quien declaró de forma pública en
+                el alegato
+                de autodefensa La Historia me Absolverá, como el autor intelectual de la acción al expresar: “Parecía que
+                el Apóstol iba a morir en el año de su centenario”.
+                Esta frase aparece en la parte inferior del relieve en bronce realizado por el escultor, pintor y
+                dibujante santiaguero Alberto Lescay Merencio en el año 1990, en los talleres de la Fundación Caguayo. La
+                imagen de José Martí,
+                se convierte en el anfitrión del recorrido por el museo, para los visitantes interesados en conocer la
+                historia que atesora el antiguo Cuartel Moncada .Un código QR desde la obra de arte, permite acceder a
+                otras informaciones
+                relevantes sobre el artista y de los momentos históricos de la institución donde el relieve fue captado
+                por el lente de importantes fotógrafos.</p>
+            </div>
+  
+          </div>
+  
+  
+  
+        </div>
+      </ngx-slick-carousel>
+  
+      <div class="carousel-controls">
+        <button mat-raised-button (click)="slickmodal.slickPrev()" class="arrow-button">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button mat-raised-button (click)="slickmodal.slickNext()" class="arrow-button">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="callout-rojo3 heading-title heading-arrowb-bottom ">
+  
+      <div class="container ">
+  
+        <section class="section bg-transparent border-0  p-relative overflow-hidden margen-superior">
+          <div class="container pb-5 mb-3">
+              <div class="row mb-2">
+                  <div class="col text-left">
+                      <h5 class="mb-2 ">Galería de imágenes de la sala</h5>
+                      <p>Una visión de nuestra historia a través de las imágenes</p>
+                  </div>
+              </div>
+              <div class="row pt-3">
+                  <div class="col-sm-6 mb-4 col-lg-3">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                              <span class="thumb-info-wrapper">
+                                                  <img src="assets/img/moncada/salas/sala1/480x270/retrato.jpg" alt="" class="img-fluid">
+                                                  <span class="thumb-info-action">
+                                                      <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                          </span>
+                          </span>
+                          </span>
+                      </a>
+      
+                  </div>
+                  <div class="col-sm-6 col-md-3 mb-4">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                          <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                              <span class="thumb-info-wrapper">
+                                                  <img src="assets/img/moncada/salas/sala1/480x270/chaleco.jpg" alt="" class="img-fluid">
+                                                  <span class="thumb-info-action">
+                                                      <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                          </span>
+                          </span>
+                          </span>
+                      </a>
+      
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                          <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                              <span class="thumb-info-wrapper">
+                                                  <img src="assets/img/moncada/salas/sala1/480x270/1.jpg" alt="" class="img-fluid">
+                                                  <span class="thumb-info-action">
+                                                      <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                          </span>
+                          </span>
+                          </span>
+                      </a>
+      
+                  </div>
+      
+                  <div class="col-sm-6 col-md-3">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                          <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                              <span class="thumb-info-wrapper">
+                                                  <img src="assets/img/moncada/salas/sala1/480x270/2.jpg" alt="" class="img-fluid">
+                                                  <span class="thumb-info-action">
+                                                      <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                          </span>
+                          </span>
+                          </span>
+                      </a>
+      
+                  </div>
+      
+              </div>
+          </div>
+      </section>
+  
+      </div>
+  
+  </section>
+  
+    <app-salas></app-salas>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+        <div class="modal-content-special">
+          <div class="modal-body">
+            <img style="width: 600px;" src="assets/img/moncada/salas/sala1/480x270/retrato.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+        <div class="modal-content-special">
+          <div class="modal-body">
+            <img style="width: 600px;" src="assets/img/moncada/salas/sala1/480x270/chaleco.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+        <div class="modal-content-special">
+          <div class="modal-body">
+            <img style="width: 600px;" src="assets/img/moncada/salas/sala1/480x270/1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+        <div class="modal-content-special">
+          <div class="modal-body">
+            <img style="width: 600px;" src="assets/img/moncada/salas/sala1/480x270/2.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+

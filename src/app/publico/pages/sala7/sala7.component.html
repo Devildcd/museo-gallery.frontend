@@ -1,0 +1,233 @@
+
+
+<!-- botones flotantes para redes sociales -->
+
+<!-- aqui va el codigo de los botones flotantes -->
+<app-botones-flotantes></app-botones-flotantes>
+
+<!-- cabecera pagina -->
+<section class="section section-height-4 border-0 m-0 section-overlay-opacity section-overlay-opacity-scale-3" style="background-image:url(assets/img/moncada/banner/sala2.jpg)">
+  <div class="container position-relative pt-5 pb-5-5 mt-5 mb-5">
+      <div class="row justify-content-end pt-1 mt-lg-5">
+
+      </div>
+  </div>
+</section>
+
+<!-- intro de historia-->
+
+<section class="section section-no-border pt-0 pb-5 m-0 callout-dark heading-title heading-arrow-bottom">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-10 text-center offset-lg-1">
+              <h3 class="mb-0">SALAS DEL MUSEO</h3>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<section class="    heading-arrow3-bottom " style="margin-bottom: 40px;">
+
+  <div class="container margen-superior margen-inferior">
+    <div class="row animate__animated animate__rollIn">
+      <div class="col-sm-10 col-md-10 col-lg-10 text-left mb-4">
+        <h5 class="mb-3">Sala 7: Las ideas no se matan</h5>
+        <h4 class="mb-3" style="color: #000;">Título de la exposición: “Las ideas no se matan”</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container animate__animated animate__zoomInLeft" style="margin-top: -80px;">
+    <ngx-slick-carousel class="carousel" #slickmodal="slick-carousel" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let slide of slides; let i = index" class="slide">
+        <div class="row">
+
+          <div class="vista">
+
+            <div *ngIf="i == 0" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1620039.JPG" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1640453.JPG" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1580616.JPG" class="d-block" alt="...">
+                </div>
+                
+              </div>
+            </div>
+            <p class="text-justify texto" *ngIf="i == 0"> Luego del asalto al cuartel Moncada, muchos de los revolucionarios apresados fueron asesinados y la dictadura batistiana dispersó en el patio interior del cuartel Moncada y en Villa Blanca, hoy Granjita Siboney, cadáveres para simular que habían caído en combate. De esta manera se lograron manipular los hechos a través de una rueda de prensa, que presidió el coronel Alberto del Rio Chaviano, jefe del Regimiento. El primero de agosto de 1953, Fidel Castro Ruz, fue capturado por el segundo teniente Pedro Manuel Sarria Tartabull (1900- 1972) en una vara en tierra cerca de la cordillera de la Gran Piedra. Sarría, insubordinándose a las órdenes dadas, traslada a Fidel hacia el Vivac de Santiago de Cuba en el camión propiedad del campesino Manuel Leizán, y conducido por su hijo Juan. evitando así que fuera asesinado por esbirros de la dictadura. La frase dicha por Sarría “las ideas no se matan” se ha convertido en una referencia de honor y honestidad militar y da título a este espacio museal. </p>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="vista">
+
+            <div *ngIf="i == 1" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1610992.JPG" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/moncada/salas/sala7/grande/Sala 7/Uniforme perteneciente al primer Teniente Pedro Manuel Sarria Tartabull.JPG" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1640456.JPG" class="d-block" alt="...">
+                </div>
+               
+              </div>
+            </div>
+            <p class="text-justify texto" *ngIf="i == 1">El 26 de Julio de 1953, es sin lugar a dudas, la fecha más trascendental del proceso revolucionario cubano en su última etapa. El tratamiento dado a tan significativa efemérides tuvo sus particularidades antes y después de 1959. Previo al triunfo revolucionario la dictadura militar de Fulgencio Batista no permitió ningún tipo de festejo alrededor de este hecho, pues se reconocería de tal manera el ejemplo imperecedero de la juventud a la cual la dictadura segó la vida. En 1959, Se aprobó el decreto ley que estableció el 26 de julio como Día de la Rebeldía nacional y el 30 de Julio como Día de los Mártires de la Revolución Cubana, en una reunión histórica del Consejo de Ministros efectuado en el antiguo Cuartel Moncada. Durante la realización del Taller Nacional Aniversario 65 del 26 de Julio, que reunió por primera vez en esta ciudad, escenario principal del suceso que inició la última etapa de la gesta libertaria de los cubanos, a museólogos, investigadores y especialistas de estos sitios en el país para intercambiar experiencias en torno al trabajo patrimonial, de investigación y promoción sobre estos acontecimientos. Se acordó crear la Red de Instituciones vinculadas a las acciones del 26 de Julio de 1953. </p>
+          </div>
+
+        </div>
+
+      </div>
+    </ngx-slick-carousel>
+
+    <div class="carousel-controls">
+      <button mat-raised-button (click)="slickmodal.slickPrev()" class="arrow-button">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <button mat-raised-button (click)="slickmodal.slickNext()" class="arrow-button">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- fin seccion contacto -->
+
+
+<!-- fin otra informacion de la sala-->
+
+<!-- seccion galeria de imagenes-->
+
+<!-- fin seccion galeria de imagenes-->
+
+
+<!-- galeria de videos del moncada-->
+<section class="callout-rojo3 heading-title heading-arrowb-bottom ">
+
+  <div class="container ">
+
+    <section class="section bg-transparent border-0  p-relative overflow-hidden margen-superior">
+      <div class="container pb-5 mb-3">
+          <div class="row mb-2">
+              <div class="col text-left">
+                  <h5 class="mb-2 ">Galería de imágenes de la sala</h5>
+                  <p>Una visión de nuestra historia a través de las imágenes</p>
+              </div>
+          </div>
+          <div class="row pt-3">
+              <div class="col-sm-6 mb-4 col-lg-3">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                          <span class="thumb-info-wrapper">
+                                              <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1620039.JPG" alt="" class="img-fluid img-pers">
+                                              <span class="thumb-info-action">
+                                                  <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                      </span>
+                      </span>
+                      </span>
+                  </a>
+  
+              </div>
+              <div class="col-sm-6 col-md-3 mb-4">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                      <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                          <span class="thumb-info-wrapper">
+                                              <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1620314.JPG" alt="" class="img-fluid img-pers">
+                                              <span class="thumb-info-action">
+                                                  <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                      </span>
+                      </span>
+                      </span>
+                  </a>
+  
+              </div>
+              <div class="col-sm-6 col-md-3">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                      <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                          <span class="thumb-info-wrapper">
+                                              <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1640453.JPG" alt="" class="img-fluid img-pers">
+                                              <span class="thumb-info-action">
+                                                  <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                      </span>
+                      </span>
+                      </span>
+                  </a>
+  
+              </div>
+  
+              <div class="col-sm-6 col-md-3">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                      <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+                                          <span class="thumb-info-wrapper">
+                                              <img src="assets/img/moncada/salas/sala7/grande/Sala 7/P1640454.JPG" alt="" class="img-fluid img-pers">
+                                              <span class="thumb-info-action">
+                                                  <span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                      </span>
+                      </span>
+                      </span>
+                  </a>
+  
+              </div>
+  
+          </div>
+      </div>
+  </section>
+  </div>
+
+</section>
+
+<app-salas></app-salas>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+    <div class="modal-content-special">
+      <div class="modal-body">
+        <img style="width: 600px;" src="assets/img/moncada/salas/sala7/grande/Sala 7/P1620039.JPG" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+    <div class="modal-content-special">
+      <div class="modal-body">
+        <img style="width: 600px;" src="assets/img/moncada/salas/sala7/grande/Sala 7/P1620314.JPG" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+    <div class="modal-content-special">
+      <div class="modal-body">
+        <img style="width: 600px;" src="assets/img/moncada/salas/sala7/grande/Sala 7/P1640453.JPG" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para un modal grande -->
+    <div class="modal-content-special">
+      <div class="modal-body">
+        <img style="width: 600px;" src="assets/img/moncada/salas/sala7/grande/Sala 7/P1640454.JPG" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

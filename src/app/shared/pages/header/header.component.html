@@ -1,0 +1,29 @@
+
+
+  <nav id='menu'  [ngClass]="{ 'shrunk': isShrunk }" class="d-flex">
+    <div class="header-logo">
+      <a [routerLink]="['/museo/inicio']">
+        <img id="logo" alt="moncada" src="assets/img/moncada/logo/logoblanco2.png">
+      </a>
+    </div>
+    <ul [ngClass]="{'show-menu': showMenu}">
+      <li><a [routerLink]="['/museo/historia']">Museo 26 de Julio</a></li>
+      <li><a [routerLink]="['/museo/museo']">Museo</a></li>
+      <li><a class='dropdown-arrow' (click)="toggleSubMenu($event)">Servicios</a>
+        <ul  *ngIf="mostrarSubMenu" class='sub-menus'>
+          <li><a [routerLink]="['/museo/eventos']">Programación Cultural</a></li>
+          <li><a href='https://biblioteca.museo26dejulio.cult.cu/' target="_blank">Biblioteca Virtual</a></li>
+          <li><a [routerLink]="['/museo/centro-documentación']">Centro de Documentación</a></li>
+        </ul>
+      </li>
+      <li><a [routerLink]="['/museo/noticias']">Informaciones</a></li>
+    </ul>
+    <div class="ms-auto d-flex" [ngClass]="{ 'mt-n2': isShrunk }">
+      <div *ngIf="showIcon" class="show-at-891px">
+        <i class="fas fa-bars" style="color: aliceblue; margin-right: 20px; margin-top: 20px;" (click)="mostrarMenu()"></i>
+      </div>
+      <!-- <i class="fas fa-search custom-search-icon"></i> -->
+    </div>
+  </nav>
+
+ 

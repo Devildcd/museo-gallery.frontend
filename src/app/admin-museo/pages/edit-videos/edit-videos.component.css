@@ -1,0 +1,13 @@
+.example-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-button {
+    background-color: #212529!important;
+    color: white!important;
+  }
+
+.custom-button:hover {
+    background-color: rgb(56, 56, 56)!important;
+  }

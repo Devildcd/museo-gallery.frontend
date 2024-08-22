@@ -1,0 +1,46 @@
+.circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ac0904;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+
+
+a[data-title]:hover:after {
+  content: attr(data-title);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  bottom: 100%;
+  white-space: nowrap;
+}
+
+@font-face {
+  font-family: 'Kessel105Text-Book' format('truetype');
+  src: url('/assets/fonts/kessel-105-text-heavy-oblique.ttf');
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+}
+
+h5{
+  font-family: 'Kessel105Text-Book';
+  font: 'Kessel105Text-Book';
+  font-size: 17pt;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+
+  

@@ -1,0 +1,45 @@
+
+
+<div class="container-fluid ">
+
+    <div class="card card d-flex flex-column">
+        <div class="card-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span id="card_title">
+                    <h3>Editar Video</h3>
+                </span>
+
+               
+            </div>
+
+            <div class="card-body flex-grow-1">
+
+                <form [formGroup]="formEdit">
+
+                    <div class="example-inline-container">
+
+                        <mat-form-field class="example-input">
+                            <mat-label>Título</mat-label>
+                            <input matInput formControlName="titulo" required>
+                          </mat-form-field>
+
+                          <mat-form-field class="example-input">
+                            <mat-label>Url</mat-label>
+                            <input matInput formControlName="videoUrl" required>
+                          </mat-form-field>
+
+                    </div>
+
+                   <div class="example-container">
+                    <button mat-raised-button type="submit" (click)="editVideo()" class="custom-button" >Aceptar</button>
+                   </div>
+                    
+                  </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

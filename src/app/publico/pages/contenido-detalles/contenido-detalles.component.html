@@ -1,0 +1,199 @@
+
+<div *ngIf="loading" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+<!-- aqui va el codigo de los botones flotantes -->
+<app-botones-flotantes></app-botones-flotantes>
+
+<!-- cabecera pagina -->
+<div class="banner-container" style="display: flex; justify-content: center; align-items: center; width: 100%; height: auto; background-size: cover; background-position: center; position: relative;">
+    <img src="assets/img/F1EuSEVWAAIm9zX.jpg"  style="width: 120%; height: 500px; margin-top: 0px; z-index: 0;" class="d-block w-100" alt="...">
+  </div>
+<!-- eventos recientes -->
+<!-- intro de historia-->
+<!-- <div *ngIf="!loading"> -->
+<section class="section section-no-border pt-0 pb-5 m-0 callout-dark heading-title heading-arrow-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 text-center offset-lg-1">
+                <h3 class="mb-0">{{contenido.tipo}}</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- detalle de la informacion -->
+
+<!-- CALLOUT blanco ARROW BOTTOM -->
+<section class="callout-blanco heading-title heading-arrow3-bottom about-section">
+
+    <div class="home-intro3 margen-superior">
+
+        <div class="container justify-content-center">
+            <div class="row pb-1">
+                <div class="col-sm-7 col-md-7 col-lg-7 pb-3">
+                    <div class="text-left">
+                        <div class="mb-2 animate__animated animate__backInDown">
+                            <h5>{{contenido.nombre}}</h5>
+                            <h4>{{contenido.info}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-7 col-md-7 col-lg-7">
+                    <div class="animate__animated animate__backInLeft">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img [src]="contenido?.imagenes?.[0]?.img | img" class="img-fluid imagen-evento-grande" style="object-fit: cover;">
+                              </div>
+                              <div class="carousel-item" *ngFor="let imagen of contenido?.imagenes?.slice(1)">
+                                <img [src]="imagen.img | img" class="img-fluid d-block w-100 imagen-evento-grande">
+                              </div>
+                              
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                    
+                  </div>
+
+                <div class="col-sm-5 col-md-5 col-lg-5">
+
+                    <div class="post-meta animate__animated animate__backInRight" >
+                       
+                        <div scrollbar style="height: 350px; overflow: auto">
+                            <p class="texto"> {{contenido.detalles}}  </p>
+                        </div>
+                        
+                        <span class="date" style="display: block; color: #Cb7401; padding: 10px 10px 10px 10px">{{contenido.fecha?.toLocaleDateString()}}</span>
+                        <span style="color: #Cb7401; padding: 0px 10px 10px 10px; font-size: 15px;"><i class="far fa-eye mr-2"> {{contenido.visitas}}</i></span>
+                            
+                          
+                        
+                      </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- </div> -->
+<!-- /CALLOUT ARROW BOTTOM -->
+
+<!-- fin del post detalle de la informacion -->
+
+
+<!-- galeria de videos del evento-->
+
+<section id="div1" [ngClass]="{'animate__animated': isVisible1, 'animate__fadeInUp': isVisible1}" *ngIf="contenido.tipo === 'Evento' && videos.length > 0" class="callout-rojo2 heading-title heading-arrowb-bottom margen-superior margen-inferior">
+
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col text-left">
+                <h5 class="mb-2">Galería de Videos del Evento </h5>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="main-content">
+              <div class="main-video">
+                <iframe [src]="selectedVideo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+          
+            <div class="video-list" style="margin-top: -5px;">
+              <div *ngFor="let video of videos" (click)="playVideo(video.url)" style="background-color: #faf9f9;" class="vid active">
+                <img src="assets/img/video.png" (mouseenter)="imageHoverStatesVideo[video.id!] = true" (mouseleave)="imageHoverStatesVideo[video.id!] = false" [ngClass]="{'animate__animated animate__pulse': imageHoverStatesVideo[video.id!]}">
+                <h3 style="color: #000; width: 300px;" class="title">{{ video.nombre }}</h3>
+              </div>
+            </div>
+          </div>
+    </div>
+
+</section>
+
+<!-- seccion de la galeria de imagenes del evento-->
+<!-- <div id="div2" [ngClass]="{'animate__animated': isVisible2, 'animate__fadeInUp': isVisible2}" class="content bg-light overflow-hidden p-relative">
+
+    <section class="section bg-transparent border-0 pb-0 mb-0 p-relative overflow-hidden margen-superior">
+        <div class="container pb-5 mb-3">
+            <div class="row mb-2">
+                <div class="col text-left">
+                    <h5 class="mb-2 ">Galería de imágenes del evento</h5>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-sm-6 mb-4 col-lg-3">
+                    <a href="#ourHistoryLightbox">
+                        <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+									<span class="thumb-info-wrapper">
+										<img src="assets/img/moncada/noticias/eventos/evento1/portada/1.jpg" alt="" class="img-fluid">
+										<span class="thumb-info-action">
+											<span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                        </span>
+                        </span>
+                        </span>
+                    </a>
+
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <a href="#ourHistoryLightbox">
+                        <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+									<span class="thumb-info-wrapper">
+										<img src="assets/img/moncada/noticias/eventos/evento1/portada/2.jpg" alt="" class="img-fluid">
+										<span class="thumb-info-action">
+											<span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                        </span>
+                        </span>
+                        </span>
+                    </a>
+
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="#ourHistoryLightbox">
+                        <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+									<span class="thumb-info-wrapper">
+										<img src="assets/img/moncada/noticias/eventos/evento1/portada/3.jpg" alt="" class="img-fluid">
+										<span class="thumb-info-action">
+											<span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                        </span>
+                        </span>
+                        </span>
+                    </a>
+
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <a href="#ourHistoryLightbox">
+                        <span class="thumb-info custom-thumb-info-style-1 thumb-info-no-borders thumb-info-no-borders-rounded">
+									<span class="thumb-info-wrapper">
+										<img src="assets/img/moncada/noticias/eventos/evento1/portada/4.jpg" alt="" class="img-fluid">
+										<span class="thumb-info-action">
+											<span class="thumb-info-action-icon border-radius-0"><i class="fas fa-plus"></i></span>
+                        </span>
+                        </span>
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div> -->
+
+
+
+<!-- Galería de imágenes de los martires del moncada -->

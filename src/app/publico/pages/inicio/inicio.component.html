@@ -1,0 +1,357 @@
+
+<div *ngIf="loading" class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+
+
+  <!-- <app-header></app-header> -->
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" (mouseenter)="imageHoverBanner = true" (mouseleave)="imageHoverBanner = false">
+        <img src="assets/img/moncada/bannerhistoria.jpg" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; filter: brightness(85%);" 
+        [ngClass]="{'zoomed-image': imageHoverBanner}" class="d-block w-100 imagen-banner" alt="...">
+        <div *ngIf="imageHoverBanner" (mouseenter)="$event.stopPropagation()" class="text-position">
+          <div class="testimonial-with-quotes testimonial-remove-right-quote mb-0" style="text-align: right;">
+            <blockquote >
+                <p class="mb-0 text-color-light texto-derecha">"Mis compañeros, además, no están ni olvidados ni muertos, viven hoy más que nunca y sus matadores han de ver aterrorizados como surge de sus cadáveres heroicos el espectro victorioso de sus ideas".</p>
+            </blockquote>
+        </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item" (mouseenter)="imageHoverBanner = true" (mouseleave)="imageHoverBanner = false">
+        <img src="assets/img/moncada/banner/banner3.jpg" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; filter: brightness(70%);" 
+        [ngClass]="{'zoomed-image': imageHoverBanner}" class="d-block w-100 imagen-banner" alt="...">
+        <div *ngIf="imageHoverBanner" (mouseenter)="$event.stopPropagation()" class="text-position">
+          <div class="testimonial-with-quotes testimonial-remove-right-quote mb-0" style="text-align: right;">
+            <blockquote >
+                <p class="mb-0 text-color-light texto-derecha">"Mis compañeros, además, no están ni olvidados ni muertos, viven hoy más que nunca y sus matadores han de ver aterrorizados como surge de sus cadáveres heroicos el espectro victorioso de sus ideas".</p>
+            </blockquote>
+        </div>
+        </div>
+      </div>
+  
+      <div class="carousel-item" (mouseenter)="imageHoverBanner = true" (mouseleave)="imageHoverBanner = false">
+        <img src="assets/img/moncada/banner/banner1.jpg" style="width: 120%; height: 500px; margin-top: 0px; z-index: 0; filter: brightness(70%);" 
+        [ngClass]="{'zoomed-image': imageHoverBanner}" class="d-block w-100 imagen-banner" alt="...">
+        <div *ngIf="imageHoverBanner" (mouseenter)="$event.stopPropagation()" class="text-position">
+          <div class="testimonial-with-quotes testimonial-remove-right-quote mb-0" style="text-align: right;">
+            <blockquote >
+                <p class="mb-0 text-color-light texto-derecha">"Mis compañeros, además, no están ni olvidados ni muertos, viven hoy más que nunca y sus matadores han de ver aterrorizados como surge de sus cadáveres heroicos el espectro victorioso de sus ideas".</p>
+            </blockquote>
+        </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  <!-- aqui va el codigo de los botones flotantes -->
+ <app-botones-flotantes></app-botones-flotantes>
+  
+  
+  
+  <!-- CALLOUT negro ARROW BOTTOMvariante 2 -->
+  <section class="callout-dark heading-title heading-arrow-bottom">
+  
+      <div class="home-intro2">
+          <div class="container">
+  
+              <div class="row align-items-center justify-content-between">
+                  <div class="col-sm-4 col-md-4 col-lg-4 icon-box text-center">
+  
+                      <div class="box-content text-center">
+                          <i class="icon-featured far fa-map"></i>
+                          <h4>Dirección</h4>
+                          <p class="mb-0">
+                              Calle Trinidad Esquina Moncada sin número, Santiago de Cuba, Cuba.
+                          </p>
+                      </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 col-lg-4 text-center">
+                      <h4 class="mb-2">Museo histórico 26 de julio.</h4>
+                      <h4 class="mb-2">Recibirle nos complace.</h4>
+                      <p>Los invitamos a visitar nuestra instalación... </p>
+                  </div>
+  
+                  <div class="col-sm-4 col-md-4 col-lg-4 icon-box text-center">
+  
+                      <div class="box-content">
+                          <i class="icon-featured far fa-clock"></i>
+                          <h4>Horario</h4>
+                          <p class="mb-0">Lunes a Sábado 9:00AM - 5:00PM</p>
+                          <p class="mb-0">Domingo 9:00AM - 1:00PM</p>
+                      </div>
+  
+                  </div>
+              </div>
+  
+  
+  
+          </div>
+      </div>
+  
+  </section>
+  <!-- /CALLOUT ARROW BOTTOM -->
+  
+  <!-- seccion breve reseña del museo -->
+  
+  <!-- CALLOUT blanco ARROW BOTTOM -->
+  <!-- <div *ngIf="!loading"> -->
+  <section class="callout-blanco heading-title heading-arrow3-bottom about-section">
+  
+      <div class="home-intro3 margen-superior">
+  
+          <div id="div1" [ngClass]="{'animate__animated': isVisible1, 'animate__fadeInUp': isVisible1}" class="container">
+              <div class="row pb-1">
+                  <div class="col-sm-7 col-md-7 col-lg-7 pb-3">
+                      <div class="text-left">
+                          <div class="mb-2">
+                              <h5>Principales eventos del museo</h5>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-7 col-md-7 col-lg-7" style=" margin-bottom: 10px;">
+                      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" *ngIf="imagenesEvento.length > 0">
+                            <img [src]="imagenesEvento[0].img | img" class=" imagen-evento-grande" style="object-fit: cover;">
+                          </div>
+                          <div class="carousel-item" *ngFor="let imagenEvento of imagenesEvento.slice(1)">
+                            <img [src]="imagenEvento.img | img" class="img-fluid d-block w-100 imagen-evento-grande">
+                          </div>
+  
+                          <div class="carousel-item active" *ngIf="imagenesEvento.length === 0 || !imagenesEvento">
+                              <img src="assets/img/Imagenes de muestra/canciller-de-cuba-subraya.jpg" class="img-fluid imagen-evento-grande" style="object-fit: cover;">
+                             </div>
+                          
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+  
+                  <div class="col-sm-5 col-md-5 col-lg-5">
+  
+                    <div scrollbar style="height: 430px; overflow: auto">
+                      <article class="thumb-info thumb-info-no-zoom bg-transparent p-inferior-ev">
+                        <div class="row " *ngFor=" let evento of eventos.slice(0,3) ">
+                          <div class="col-sm-5 col-md-5 col-lg-5">
+                            <a [routerLink]="['/museo/detalles', evento.id]" (click)="incrementarVisitas(evento.id!)" (mouseenter)="imageHoverStatesEvento[evento.id!] = true" (mouseleave)="imageHoverStatesEvento[evento.id!] = false">
+                            <img [src]="evento.imagenes?.[0]?.img | img" [ngClass]="{'animate__animated animate__pulse': imageHoverStatesEvento[evento.id!]}" class="border-radius-0 imagen-evento-puequena d-block" style="object-fit: cover;">
+                            </a>
+                          </div>
+                        </div>
+                        
+                      </article>
+                    
+                      <div style="margin-top: -24px;">
+                        <a [routerLink]="['/museo/eventos']" >
+                          <button class="boton-eventos" [ngClass]="{'animate__animated animate__headShake': isImageHoveredBottom}" 
+                          (mouseenter)="isImageHoveredBottom = true" 
+                          (mouseleave)="isImageHoveredBottom = false" mat-raised-button color="warn">Más eventos</button>
+                        </a>
+                      </div>
+                    </div>
+                      
+                      
+                  </div>
+              </div>
+  
+  
+          </div>
+      </div>
+  
+  </section>
+  <!-- /CALLOUT ARROW BOTTOM -->
+  <!--End seccion reseña del museo -->
+  
+  
+  <!-- muestra del mes Section -->
+  <!-- CALLOUT MUESTRA DEL MES rojo ARROW BOTTOM -->
+  <section class="callout-rojo heading-title heading-arrow2-bottom">
+  
+      <div class="home-intro2 margen-superior">
+          <div id="div2" [ngClass]="{'animate__animated': isVisible2, 'animate__fadeInRight': isVisible2}" class="container">
+              <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                      <div class="title">
+                          <h5 class="mb-3-5">Muestra del mes</h5>
+  
+                          <h4 class="mb-0" style="padding: 10px;">
+                              {{ muestraPrincipal?.nombre }}
+                          </h4>
+  
+                          <div scrollbar style="height: 260px; overflow: auto">
+                           <p class="mb-2 texto">
+                               {{ muestraPrincipal?.detalles }}      
+                          </p>
+                          </div>
+  
+                      </div>
+  
+                      
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+  
+                      <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" *ngIf="imagenesMuestra.length > 0">
+                            <img [src]="imagenesMuestra[0].img | img" class="d-block w-100 imagen-muestra" alt="...">
+                          </div>
+                          <div class="carousel-item" *ngFor="let imagenMuestra of imagenesMuestra.slice(1)">
+                            <img [src]="imagenMuestra.img | img" class="img-fluid d-block w-100 imagen-muestra" alt="...">
+                          </div>
+                          <div class="carousel-item active" *ngIf="imagenesMuestra.length === 0 || !imagenesMuestra">
+                            <img src="assets/img/Imagenes de muestra/canciller-de-cuba-subraya.jpg" class="img-fluid imagen-evento-grande" style="object-fit: cover;">
+                           </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                          
+                  </div>
+  
+              </div>
+  
+          </div>
+      </div>
+  
+  </section>
+  <!-- /CALLOUT ARROW BOTTOM -->
+  <!--End muestra del mes Section -->
+  
+  
+  <!-- seccion de la frase de fidelvariante 2 -->
+  
+  <!-- fin seccion de la frase de fidelvariante 2 -->
+  
+  <div class="banner-container" style="display: flex; justify-content: center; align-items: center; width: 100%; height: auto; background-size: cover; background-position: center; position: relative;">
+    <img src="assets/img/moncada.jpg"  style="width: 120%; height: 500px; margin-top: 0px; z-index: 0;" class="d-block w-100" alt="...">
+    <div style="position: absolute; top: 75%; left: 45%; transform: translate(-50%, -50%); z-index: 1; width: 80%; height: auto;">
+      <div class="testimonial-with-quotes testimonial-remove-right-quote mb-0" style="text-align: right;">
+        <!-- <blockquote style="max-width: 400px;">
+            <p class="mb-0 text-color-light" style="font-size:24px; overflow: hidden; overflow: auto;"><em>"Mis compañeros, además, no están ni olvidados ni muertos, viven hoy más que nunca y sus matadores han de ver aterrorizados como surge de sus cadáveres heroicos el espectro victorioso de sus ideas".</em></p>
+        </blockquote> -->
+        <!-- <div class="testimonial-author" style="max-width: 400px; margin-top: -10px;">
+            <p class="mb-0"><strong class="text-color-light" style="font-size: 17pt;"><em>Fidel Castro Ruz</em></strong></p>
+        </div> -->
+    </div>
+    </div>
+  </div>
+  
+  <!--mapa de la seccion de las salas -->
+  <!--  paseo virtual -->
+  <div id="div4" [ngClass]="{'animate__animated': isVisible4, 'animate__zoomInDown': isVisible4}">
+    <app-salas></app-salas>
+  </div>
+  
+  
+  
+  <!-- fin paseo virtual -->
+  <!--fin de la seccion mapas otra variante -->
+  
+  
+  
+  
+  
+  
+  <!-- sección donde van a estar los tabs de noticias eventos etc-->
+  <!--TABS NOTICIAS EVENTOS  CALLOUT rojo ARROW BOTTOM -->
+  
+  
+  <section class="callout-rojo heading-title heading-arrow2-bottom">
+      <div class="home-intro2 margen-superior margen-inferior">
+          <div id="div3" [ngClass]="{'animate__animated': isVisible3, 'animate__fadeInUp': isVisible3}" class="container">
+  
+              <div class="row pb-1">
+                  <div class="col-sm-7 col-md-7 col-lg-7 pb-3">
+                      <div class="text-left">
+                          <div class="mb-2">
+                              <h5>Principales noticias del museo</h5>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="col-sm-7 col-md-7 col-lg-7" style="margin-bottom: 10px;">
+                      <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" *ngIf="imagenesNoticia.length > 0">
+                            <img [src]="imagenesNoticia[0].img | img" class="imagen-evento-grande" style="object-fit: cover;">
+                          </div>
+                          <div class="carousel-item" *ngFor="let imagenNoticia of imagenesNoticia.slice(1)">
+                            <img [src]="imagenNoticia.img | img" class="img-fluid d-block w-100 imagen-evento-grande">
+                          </div>
+  
+                          <div class="carousel-item active" *ngIf="imagenesNoticia.length === 0 || !imagenesNoticia">
+                              <img src="assets/img/Imagenes de muestra/canciller-de-cuba-subraya.jpg" class="img-fluid imagen-evento-grande" style="object-fit: cover;">
+                             </div>
+                          
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+  
+                  <div class="col-sm-5 col-md-5 col-lg-5">
+  
+                    <div scrollbar style="height: 430px; overflow: auto">
+                      <article class="thumb-info thumb-info-no-zoom bg-transparent p-inferior-ev">
+                        <div class="row " *ngFor=" let noticia of noticias.slice(0.3)">
+                          <div class="col-sm-5 col-md-5 col-lg-5">
+                            <a [routerLink]="['/museo/detalles', noticia.id]" (click)="incrementarVisitas(noticia.id!)" (mouseenter)="imageHoverStatesNoticia[noticia.id!] = true" (mouseleave)="imageHoverStatesNoticia[noticia.id!] = false">
+                              <img [src]="noticia.imagenes?.[0]?.img | img" [ngClass]="{'animate__animated animate__pulse': imageHoverStatesNoticia[noticia.id!]}" class="border-radius-0 imagen-evento-puequena d-block" style="object-fit: cover;" class="border-radius-0 imagen-evento-puequena d-block" style="object-fit: cover;">
+                            </a>
+                          </div>
+                        </div>
+                      </article>
+                    
+                      <div style="margin-top: -24px;">
+                        <button [routerLink]="['/museo/noticias']" [ngClass]="{'animate__animated animate__headShake': isImageHoveredBottom}" 
+                        (mouseenter)="isImageHoveredBottom = true" 
+                        (mouseleave)="isImageHoveredBottom = false" class="boton-noticias" mat-raised-button>Más noticias</button>
+                      </div>
+                    </div>
+                      
+                      
+                  </div>
+              </div>
+  
+  
+          </div>
+      </div>
+  </section>
+  
+  <!-- /CALLOUT ARROW BOTTOM -->
+  
+  
+  <!-- /CALLOUT ARROW BOTTOM -->
+  <!--End seccion reseña del museo -->
+  
+<!-- </div> -->

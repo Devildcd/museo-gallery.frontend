@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Kessel105Text-Book' format('truetype');
+  src: url('/assets/fonts/kessel-105-text-heavy-oblique.ttf');
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+}
+
+
+h5{
+  font-family: 'Kessel105Text-Book';
+  font: 'Kessel105Text-Book';
+  font-size: 17pt;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+p {
+    text-align: justify;
+    white-space: pre-wrap;
+  }
+
+  .estudiante-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .elemento {
+    margin-bottom: 10px; /* Ajusta el valor según el espaciado deseado */
+  }
+
+  .preview-images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 10px;
+  }
+  
+  .preview-card {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .preview-card img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+  }

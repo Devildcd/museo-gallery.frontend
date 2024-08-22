@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Kessel105Text-Book' format('truetype');
+  src: url('/assets/fonts/kessel-105-text-heavy-oblique.ttf');
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Kessel105Text-Book';
+}
+
+
+h5{
+  font-family: 'Kessel105Text-Book';
+  font: 'Kessel105Text-Book';
+  font-size: 17pt;
+  line-height: 24px;
+  font-weight: bold;
+}
